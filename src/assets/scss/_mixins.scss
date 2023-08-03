@@ -1,0 +1,123 @@
+// MIXINS
+@mixin displayText() {
+     color: $color-black;
+     font-size: $font-lg;
+     font-weight: 600;
+}
+
+@mixin headerText() {
+     color: $color-black;
+     font-size: $font-xxl;
+     font-weight: 700;
+}
+
+@mixin title1Text() {
+     color: $color-black;
+     font-size: $font-xl;
+     font-weight: 500;
+}
+
+@mixin title2Text() {
+     color: $color-black;
+     font-size: $font-md;
+     font-weight: 500;
+}
+
+@mixin headlineText() {
+     color: $color-black;
+     font-size: $font-sm;
+     font-weight: 500;
+}
+
+@mixin bodyText() {
+     color: $color-black;
+     font-size: $font-smm;
+     font-weight: 400;
+}
+
+@mixin btn($width, $height) {
+     transition: .4s;
+     overflow: hidden;
+     position: relative;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     background: $color-primary;
+     padding: 10px 14px;
+     border-radius: 20px;
+
+     p {
+          display: inline-block;
+          position: relative;
+          font-size: 1rem;
+          text-align: center;
+          color: $color-black;
+     }
+
+     &::before {
+          transition: 0.3s all ease;
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: $height;
+          width: $width;
+          background: $color-secondary;
+     }
+
+     i {
+          position: relative;
+          font-size: 1rem;
+          margin-right: 5px;
+     }
+
+     &:hover,
+     &.activeBtn {
+          transform: translateX(5px);
+
+          &::before {
+               height: 100%;
+               width: 100%;
+          }
+
+
+          p,
+          i {
+               color: $color-light;
+          }
+     }
+
+     &:disabled {
+          opacity: 0.5;
+     }
+}
+
+@mixin flex($align: center, $justify: center) {
+     display: flex;
+     align-items: $align;
+     justify-content: $justify;
+}
+
+@mixin title($align: center, $text: center) {
+     @include flex($align);
+     flex-direction: column;
+     margin-bottom: 20px;
+     text-align: $text;
+
+     h3 {
+          @include title1Text;
+          margin-bottom: 15px;
+     }
+
+     span {
+          margin-bottom: 5px;
+          @include bodyText;
+          color: $color-primary;
+     }
+
+     p {
+          @include bodyText();
+          max-width: 500px;
+          color: $color-black-50;
+     }
+}
