@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-navbar />
-   
+   <RouterView/>
     <v-footer />
   </div>
 </template>
