@@ -43,14 +43,14 @@ export default {
     return {
       customers: [
         {
-          bio: "/src/assets/img/bio1.png",
+          bio: "../assets/img/bio1.png",
           name: "Naura Silvana",
           rate: ["fa-solid", "fa-solid", "fa-solid", "fa-solid", "fa-regular"],
           title:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.",
         },
         {
-          bio: "/src/assets/img/bio2.png",
+          bio: "../assets/img/bio2.png",
           name: "Azura",
           rate: [
             "fa-solid",

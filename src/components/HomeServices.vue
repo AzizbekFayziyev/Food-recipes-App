@@ -35,17 +35,17 @@ export default {
     return {
       serviceCards: [
         {
-          img: "src/assets/img/service1.png",
+          img: "../assets/img/service1.png",
           title: "Easy To Order",
           body: "You only order through the app",
         },
         {
-          img: "src/assets/img/service2.png",
+          img: "../assets/img/service2.png",
           title: "Fastest Delivery",
           body: "Delivery will be on time",
         },
         {
-          img: "src/assets/img/service3.png",
+          img: "../assets/img/service3.png",
           title: "Best Quality",
           body: "The best quality of food for you",
         },
